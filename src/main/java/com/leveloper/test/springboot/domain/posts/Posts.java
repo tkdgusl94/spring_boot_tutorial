@@ -1,5 +1,6 @@
 package com.leveloper.test.springboot.domain.posts;
 
+import com.leveloper.test.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity // JPA 어노테이션
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id //해당 테이블의 pk를 나타냄.
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
@@ -28,5 +29,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 }
