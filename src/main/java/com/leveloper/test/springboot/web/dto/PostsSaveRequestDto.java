@@ -1,6 +1,5 @@
 package com.leveloper.test.springboot.web.dto;
 
-//import Posts;
 import com.leveloper.test.springboot.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
