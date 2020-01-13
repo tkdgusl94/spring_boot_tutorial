@@ -11,8 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import javax.mail.Session;
-
 @RequiredArgsConstructor
 @Controller
 public class IndexController {
@@ -26,7 +24,7 @@ public class IndexController {
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
-        return "index";
+        return "main";
     }
 
     @GetMapping("/posts/save")
